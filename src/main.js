@@ -45,3 +45,10 @@ gui.add(cloths, 'colorRange')
     cloths.reset();
     stickToTop();
   });
+
+var customMethods = {Reset:function(){
+  cloths.reset();
+  stickToTop();
+}};
+
+gui.add(customMethods,'Reset');

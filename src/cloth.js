@@ -22,6 +22,7 @@ export default class Cloth {
     this.bounce = 0.5;
     this.gravity = 0.2;
     this.colorRange = 100;
+    this.elasticity = 15;
 
     this.fabric();
     this.render();
@@ -172,7 +173,7 @@ export default class Cloth {
           offsetX = dx * percent,
           offsetY = dy * percent;
 
-      if (distance > (stick.length * 9.0531478708944287)) {
+      if (distance > (stick.length * this.elasticity)) {
         stick.removed = true;
       }
 
